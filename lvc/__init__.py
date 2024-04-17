@@ -261,7 +261,7 @@ class LVC:
             inp_y = librosa.resample(inp_y, orig_sr=inp_sr, target_sr=new_sr)
             inp_y = np.clip(inp_y, -1.0, 32767.0/32768.0)
         if new_sr != sam_sr:
-            sam_y = librosa.resample(sam_y, orig_sr=sam_sr, target_sr=sam_sr)
+            sam_y = librosa.resample(sam_y, orig_sr=sam_sr, target_sr=new_sr)
             sam_y = np.clip(sam_y, -1.0, 32767.0/32768.0)
         vc_audio = self.lvc_vc_inferencer.run_inference(
             source_audio=inp_y,
