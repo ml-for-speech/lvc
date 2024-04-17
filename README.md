@@ -43,6 +43,14 @@ o, sr = l.infer_array(
 sf.write('out.wav', o, sr)
 ```
 
+### Don't use XL model
+
+You can optionally use a smaller model for lower-quality but faster results:
+
+```python
+l = LVC(use_xl_model=False) # default True
+```
+
 ## License
 
 MIT
