@@ -4,7 +4,7 @@ with open("README.md", "r") as f:
     longdesc = f.read()
 setup(
     name="lvc",
-    version="1.0",
+    version="1.0.1",
     author="mrfakename",
     description="Unofficial pip package for zero-shot voice conversion",
     long_description=longdesc,

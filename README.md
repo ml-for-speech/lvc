@@ -1,6 +1,6 @@
 # LVC
 
-Unofficial package for LVC-VC (zero-shot voice conversion) by Wonjune Kang, Mark Hasegawa-Johnson, Deb Roy.
+Unofficial pip-installable Python package for [LVC-VC](https://github.com/wonjune-kang/lvc-vc) (zero-shot voice conversion) by Wonjune Kang, Mark Hasegawa-Johnson, Deb Roy.
 
 ## Installation
 
