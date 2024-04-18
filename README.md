@@ -2,6 +2,8 @@
 
 Unofficial pip-installable Python package for [LVC-VC](https://github.com/wonjune-kang/lvc-vc) (zero-shot voice conversion) by Wonjune Kang, Mark Hasegawa-Johnson, Deb Roy.
 
+NOTE: I am not affiliated with the authors of LVC-VC (the individuals listed above).
+
 ## Installation
 
 ```
