@@ -53,6 +53,10 @@ You can optionally use a smaller model for lower-quality but faster results:
 l = LVC(use_xl_model=False) # default True
 ```
 
+## Debugging
+
+If you get an error it's because the model only currently supports short clips. I'm planning to fix this soon, but PRs are welcome!
+
 ## License
 
 MIT
