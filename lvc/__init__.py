@@ -226,17 +226,17 @@ class LVC:
             device = 'cuda' if torch.cuda.is_available() else 'cpu'
         if type(device) == str:
             device = torch.device(device)
-        self.hp = OmegaConf.load(str(cached_path('hf://mrfakename/lvc-vc/config/config_wav2vec_ecapa_c32.yaml')))
+        self.hp = OmegaConf.load(str(cached_path('hf://ml-for-speech/lvc-vc/config/config_wav2vec_ecapa_c32.yaml')))
         if use_xl_model:
-            ckpt_path = str(cached_path('hf://mrfakename/lvc-vc/lvc_vc_xl_vctk.pt'))
+            ckpt_path = str(cached_path('hf://ml-for-speech/lvc-vc/lvc_vc_xl_vctk.pt'))
         else:
-            str(cached_path('hf://mrfakename/lvc-vc/lvc_vc_vctk.pt'))
+            str(cached_path('hf://ml-for-speech/lvc-vc/lvc_vc_vctk.pt'))
         self.lvc_vc_inferencer = LVC_VC_Inference(
             hp=self.hp,
             lvc_vc_chkpt=ckpt_path,
-            speaker_encoder_chkpt=str(cached_path('hf://mrfakename/lvc-vc/ecapa_tdnn_pretrained.pt')),
-            seen_speaker_emb_gmms_pkl=str(cached_path('hf://mrfakename/lvc-vc/metadata/ecapa_tdnn_emb_gmms_all.pkl')),
-            seen_speaker_f0_metadata_pkl=str(cached_path('hf://mrfakename/lvc-vc/metadata/speaker_f0_metadata.pkl')),
+            speaker_encoder_chkpt=str(cached_path('hf://ml-for-speech/lvc-vc/ecapa_tdnn_pretrained.pt')),
+            seen_speaker_emb_gmms_pkl=str(cached_path('hf://ml-for-speech/lvc-vc/metadata/ecapa_tdnn_emb_gmms_all.pkl')),
+            seen_speaker_f0_metadata_pkl=str(cached_path('hf://ml-for-speech/lvc-vc/metadata/speaker_f0_metadata.pkl')),
             device=device
         )
     def infer_file(self, input, sample, output):
