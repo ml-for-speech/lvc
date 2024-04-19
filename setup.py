@@ -5,11 +5,11 @@ with open("README.md", "r") as f:
 setup(
     name="lvc",
     version="1.0.3",
-    author="mrfakename",
+    author="ml-for-speech, mrfakename",
     description="Unofficial pip package for zero-shot voice conversion",
     long_description=longdesc,
     long_description_content_type="text/markdown",
-    url="https://github.com/fakerybakery/lvc",
+    url="https://github.com/ml-for-speech/lvc",
     packages=find_packages(),
     install_requires=[
         "librosa",
